@@ -28,22 +28,24 @@ let colonneDemander;
 //console.log(range.value);
 //console.log(colonne);
 
-function generer(){
-    bouton.onclick = function(){
+function generer() {
+    bouton.onclick = function () {
         //console.log(range.value, colonne.value);
         //console.log(range.value);
-       // console.log(colonne.value);
+        // console.log(colonne.value);
         rangerDemander = range.value;
         colonneDemander = colonne.value;
         //monTableau.push(range.value, colonne.value);
+        console.log(rangerDemander);
+        console.log(colonneDemander);
     }
+
 }
 
 
-console.log(rangerDemander);
-console.log(colonneDemander);
+
 //console.log(monTableau);
 
-
+//console.log("c'est moi indefine",rangerDemander);
 generer();
 
