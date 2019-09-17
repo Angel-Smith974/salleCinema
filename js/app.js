@@ -1,51 +1,33 @@
-/*
-let mesPlaces = document.querySelectorAll('.zone01 input');
+let rang;
+let colonne;
+let zone = document.querySelector('.zone');
+let para = "";
+let input = '<input type="checkbox" name="" id=""></input>';
+let bouton = document.querySelector("#bouton");
 
-console.log(mesPlaces);
+//console.log(bouton);
+bouton.onclick = function () {
+    rang = document.querySelector("#rang").value; //l'appel de la valeur doit etre fait ici, pask sionn ben, le navigateur ben y voit que les valeur par défaut son vide. oui.
+    colonne = document.querySelector("#colonne").value;
+    //console.log(rang, colonne);
 
-
-function checkboxCocher(){
-    if(document.getElementById('#01').checked == true){
-        console.log(mesPlaces.indexOf, "celui-ci est coché");
+    for (i = 0; i < rang; i++) {
+        //  para = zone.innerHTML += input;
+        para += "<p>";
+        for (i2 = 0; i2 < colonne; i2++) {
+            para += input;
+            console.log(para);
+        }
+        // para += input;
+        para += "</p>";
+        zone.innerHTML = para;
     }
-    else{
-        console.log("y'a rien de coché");
-    }
-}
-checkboxCocher();
-
-console.log(mesPlaces.checked);
-*/
-
-let range = document.querySelector('#range');
-let colonne = document.querySelector('#colonne');
-let bouton = document.querySelector(".bouton");
-//let monTableau = [];
-let rangerDemander;
-let colonneDemander;
-
-
-//console.log(range.value);
-//console.log(colonne);
-
-function generer() {
-    bouton.onclick = function () {
-        //console.log(range.value, colonne.value);
-        //console.log(range.value);
-        // console.log(colonne.value);
-        rangerDemander = range.value;
-        colonneDemander = colonne.value;
-        //monTableau.push(range.value, colonne.value);
-        console.log(rangerDemander);
-        console.log(colonneDemander);
-    }
-
-}
+};
 
 
 
-//console.log(monTableau);
 
-//console.log("c'est moi indefine",rangerDemander);
-generer();
+
+
+
 
